@@ -33,23 +33,24 @@
                     //create a place holder so to display unguess words as _ _ _ _ ...
                     var word = "tokyo";
                     var placeholder=[];
-                    var numberofguesses=10;
-                    for (i = 0; i < word.length; i++) {
+                    var numberofguesses=100;
+                    for (var i = 0; i < word.length; i++) {
                       placeholder.push("_");
                     }
                     document.write(placeholder);
-                    // console.log(placeholder);
                     var guessedletter=[];
 
                     document.onkeyup = function(event) {
                             guessedletter.push(event.key);
                             console.log(guessedletter);
                             var newLetter=event.key;
-
-                    for (var i=0; i < word.length; i++ ) {
+                    
+                    for (var i = 0 ; i < word.length; i++ ) {
                       if (newLetter===word[i]) {
+                        placeholder.splice(i,1,newLetter)
                         console.log(newLetter);
-                        console.log("working")
+                        console.log("working");
+                        document.write(placeholder);
                       }
 
 
@@ -81,7 +82,7 @@
                           };
                     
                     </script>
-                  The letter that you have guessed is......<span id="user-text"></span></h2>
+                  <!-- The letter that you have guessed is......<span id="user-text"></span></h2> -->
               </div>
             </div>
           </div>
@@ -91,8 +92,6 @@
   </div>
 
   
-
-
 
   <footer>
     <div class="container">
