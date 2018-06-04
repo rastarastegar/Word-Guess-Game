@@ -33,42 +33,56 @@
                     //create a place holder so to display unguess words as _ _ _ _ ...
                     var word = "tokyo";
                     var placeholder=[];
-                    var numberofguesses=10;
-                    for (i = 0; i < word.length; i++) {
+                    var numberofguesses=100;
+                    for (var i = 0; i < word.length; i++) {
                       placeholder.push("_");
                     }
                     document.write(placeholder);
-                    // console.log(placeholder);
                     var guessedletter=[];
 
-                    // for (numberofguesses=0; numberofguesses < 11; i++ && placeholder.indexOf("_") >= 0) {
-
-                    //   var letter = document.write(placeholder.join(" ") + "\n\n" + "Guess a letter.");
-
-                    for (i = 0; i < word.length; i++) {
-
-                       document.onkeyup = function(event) {
-                        userText.textContent = event.key;
-
-                        if (guessedletter==="t") {
-                          document.write(guessedletter)
-                        }
-                          else {document.write(" make another guess!   ")
-                        }
-                        
-                      console.log(guessedletter);
+                    document.onkeyup = function(event) {
+                            guessedletter.push(event.key);
+                            console.log(guessedletter);
+                            var newLetter=event.key;
                     
-                    }
+                    for (var i = 0 ; i < word.length; i++ ) {
+                      if (newLetter===word[i]) {
+                        placeholder.splice(i,1,newLetter)
+                        console.log(newLetter);
+                        console.log("working");
+                        document.write(placeholder);
+                      }
+
+
+                      }
+
+                      // && placeholder.indexOf("_") >= 0
+
+                      // var letter = document.write(placeholder.join(" ") + "\n\n" + "Guess a letter.");
+
+                    // for (i = 0; i < word.length; i++) {
+
+                    //    document.onkeyup = function(event) {
+                    //     userText.textContent = event.key;
+
+                      //   if (guessedletter==="t") {
+                      //     document.write(guessedletter)
+                      //   }
+                      //     else { document.write (" make another guess!   ")
+                      //   }
+                        
+                      // console.log(guessedletter);
+                    
+                    
                        // Let's start by grabbing a reference to the <span> below.
-                          var userText = document.getElementById("user-text");
+                          // var userText = document.getElementById("user-text");
                     
                           // Next, we give JavaScript a function to execute when onkeyup event fires.
-                          document.onkeyup = function(event) {
-                            userText.textContent = event.key;
+                          
                           };
                     
                     </script>
-                  The letter that you have guessed is......<span id="user-text"></span></h2>
+                  <!-- The letter that you have guessed is......<span id="user-text"></span></h2> -->
               </div>
             </div>
           </div>
@@ -78,8 +92,6 @@
   </div>
 
   
-
-
 
   <footer>
     <div class="container">
