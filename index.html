@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en-us">
 <head>
@@ -101,3 +102,108 @@
 
 </body>
 </html>
+=======
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Guess Game</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+  <header id="masthead">
+    <!-- <div class="container">
+      <a href="index.html" id="logo">Word Guess Game</a>
+      <nav>
+        <a href="index.html">Start Guessing</a>
+      </nav>
+    </div> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  </header>
+  <div id="main-container" class="container">
+    <section class="main-section">
+      <h1>Word Guess Game</h1>
+      <!-- <img src="assets/images/technics-q-c-640-480-2.jpg" class="auth-image" alt="Word Guess Game"> -->
+      <p>Guess the presumed word and letters will appear in the blank if they are correctly guessed.</p>
+      <br>
+      <div class="container">
+          <div class="row">
+            <div class="col-md-offset-1 col-md-8">
+              <div class="jumbotron">
+                <h2>
+                    <script type="text/javascript">
+                    //define some words
+                    // var words=["tokyo", "tehran", "berlin", "zurich", "brussels", "jakarta"];
+                    //create a place holder so to display unguess words as _ _ _ _ ...
+                    var word = "tokyo";
+                    var placeholder=[];
+                    var numberofguesses=100;
+                    for (var i = 0; i < word.length; i++) {
+                      placeholder.push("_");
+                    }
+                    document.write(placeholder);
+                    var guessedletter=[];
+
+                    document.onkeyup = function(event) {
+                            guessedletter.push(event.key);
+                            console.log(guessedletter);
+                            var newLetter=event.key;
+                    
+                    for (var i = 0 ; i < word.length; i++ ) {
+                      if (newLetter===word[i]) {
+                        placeholder.splice(i,1,newLetter)
+                        console.log(newLetter);
+                        console.log("working");
+                        document.write(placeholder);
+                      }
+
+
+                      }
+
+                      // && placeholder.indexOf("_") >= 0
+
+                      // var letter = document.write(placeholder.join(" ") + "\n\n" + "Guess a letter.");
+
+                    // for (i = 0; i < word.length; i++) {
+
+                    //    document.onkeyup = function(event) {
+                    //     userText.textContent = event.key;
+
+                      //   if (guessedletter==="t") {
+                      //     document.write(guessedletter)
+                      //   }
+                      //     else { document.write (" make another guess!   ")
+                      //   }
+                        
+                      // console.log(guessedletter);
+                    
+                    
+                       // Let's start by grabbing a reference to the <span> below.
+                          // var userText = document.getElementById("user-text");
+                    
+                          // Next, we give JavaScript a function to execute when onkeyup event fires.
+                          
+                          };
+                    
+                    </script>
+                  <!-- The letter that you have guessed is......<span id="user-text"></span></h2> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    </section>
+  </div>
+
+  
+
+  <footer>
+    <div class="container">
+      Copyright &copy; 
+    </div>
+  </footer>
+
+</body>
+</html>
+>>>>>>> f3129db1de7197099e125fc8b6ec7bd2de3dc7cc
